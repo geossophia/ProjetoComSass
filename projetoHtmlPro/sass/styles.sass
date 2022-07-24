@@ -1,0 +1,126 @@
+@use 'variables'
+@use 'mixins'
+
+.container 
+    max-width: 830px
+    margin: auto
+
+body
+    margin: 0
+    padding: 0
+    font-family: 'Inter', sans-serif
+    background-color: variables.$bg-color
+
+header
+    .logo
+        @include mixins.padrao
+        margin-top: 35px
+
+        h2
+            color: variables.$font-color
+        
+        img
+            width: 45px
+            height: 45px
+            margin-right: 5px
+
+.section
+    &-a1
+        display: flex
+        margin-top: 100px
+    
+    &-b2
+        @include mixins.padraocolumn
+        margin-bottom: 50px
+        margin-top: 180px
+        h2
+            text-transform: uppercase
+            text-align: center
+
+    &-c3
+        @include mixins.padraocolumn
+        align-items: center
+        margin-top: 200px
+        margin-bottom: 50px
+
+        h2
+            font-size: 48px
+            color: variables.$button-color
+        
+        p 
+            color: variables.$font-color
+            margin-top: -25px
+
+.footer
+    @include mixins.padraocolumn
+    align-items: center
+    background-color: variables.$footer-color
+    height: 100px
+    padding-bottom: 40px
+
+    &-button 
+        display: inline-block
+        padding: 15px 7ox
+        background-color: variables.$button-color
+        border-radius: 50px
+        color: variables.$font-color
+        text-transform: uppercase
+        font-weight: bold
+        text-decoration: none
+        margin-top: -40px
+
+    p
+        color: variables.$font-color
+        font-size: 14px
+        margin-top: 30px
+
+
+.action-title
+    h2
+        font-size: 40px
+        color: variables.$font-color
+
+.button
+    background-color: variables.$button-color
+    display: inline-block
+    padding: 15px 70px
+    border-radius: 50px
+    color: variables.$font-color
+    font-size: 20px
+    text-transform: uppercase
+    font-weight: bold
+    text-decoration: none
+
+    &-b2
+        display: inline-block
+        background-color: variables.$card-color
+        color: variables.$font-color
+        padding: 15px 30px
+        border-radius: 50px
+        font-weight: bold
+
+
+.ebook
+    img
+        width: 230px
+        height: auto
+        margin-right: 50px
+
+.cards 
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin-top: 50px
+
+.card 
+    @include mixins.padraocolumn
+    align-items: center
+    background-color: variables.$card-color
+    width: 200px
+    height: 180px
+    border-radius: 10px
+    color: variables.$font-color
+
+    img
+        width: 65px
+        height: 65px
